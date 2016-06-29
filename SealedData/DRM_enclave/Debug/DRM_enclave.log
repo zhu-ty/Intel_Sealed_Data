@@ -1,0 +1,35 @@
+﻿Build started 6/28/2016 4:08:18 PM.
+     1>Project "D:\zhu-ty\SealData\SealedData\DRM_enclave\DRM_enclave.vcxproj" on node 2 (Rebuild target(s)).
+     1>CustomBuild:
+         Creating proxy/bridge routines
+       ClCompile:
+         C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016\windows\bin\ia32\icl.exe /c /Qm32 /I"C:\Program Files (x86)\Intel\IntelSGXSDK\include" /I"C:\Program Files (x86)\Intel\IntelSGXSDK\include\tlibc" /I"C:\Program Files (x86)\Intel\IntelSGXSDK\include\stlport" /I"C:\Program Files (x86)\Intel\IntelSGXSDK\include\epid" /Zi /nologo /W4 /WX /Od /Qftz- /D __INTEL_COMPILER=1600 /D _WINDLL /EHsc /MTd /GS /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP DRM_enclave.cpp
+         DRM_enclave.cpp
+         C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016\windows\bin\ia32\icl.exe /c /Qm32 /I"C:\Program Files (x86)\Intel\IntelSGXSDK\include" /I"C:\Program Files (x86)\Intel\IntelSGXSDK\include\tlibc" /I"C:\Program Files (x86)\Intel\IntelSGXSDK\include\stlport" /I"C:\Program Files (x86)\Intel\IntelSGXSDK\include\epid" /Zi /nologo /W4 /WX /Od /Qftz- /D __INTEL_COMPILER=1600 /D _WINDLL /EHsc /MTd /GS /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC DRM_enclave_t.c
+         DRM_enclave_t.c
+       Link:
+         C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016\windows\bin\ia32\xilink.exe -qm32 /OUT:"D:\zhu-ty\SealData\SealedData\Debug\DRM_enclave.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Program Files (x86)\Intel\IntelSGXSDK\bin\Win32\Debug" /WX sgx_trts.lib sgx_tstdc.lib sgx_tservice.lib sgx_tcrypto_opt.lib sgx_tstdcxx.lib /NODEFAULTLIB /MANIFEST:NO /DEBUG /PDB:"D:\zhu-ty\SealData\SealedData\Debug\DRM_enclave.pdb" /TLBID:1 /NOENTRY /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\zhu-ty\SealData\SealedData\Debug\DRM_enclave.lib" /MACHINE:X86 /SAFESEH /DLL Debug\DRM_enclave.obj
+         Debug\DRM_enclave_t.obj
+            Creating library D:\zhu-ty\SealData\SealedData\Debug\DRM_enclave.lib and object D:\zhu-ty\SealData\SealedData\Debug\DRM_enclave.exp
+         DRM_enclave.vcxproj -> D:\zhu-ty\SealData\SealedData\Debug\DRM_enclave.dll
+       PostBuildEvent:
+         "C:\Program Files (x86)\Intel\IntelSGXSDK\bin\win32\release\sgx_sign.exe" sign -key "DRM_enclave_private.pem" -enclave "D:\zhu-ty\SealData\SealedData\Debug\DRM_enclave.dll" -out "D:\zhu-ty\SealData\SealedData\Debug\DRM_enclave.signed.dll" -config "DRM_enclave.config.xml"
+         :VCEnd
+         <EnclaveConfiguration>
+             <ProdID>0</ProdID>
+             <ISVSVN>0</ISVSVN>
+             <StackMaxSize>0x4000</StackMaxSize>
+             <HeapMaxSize>0x10000</HeapMaxSize>
+             <TCSNum>1</TCSNum>
+             <TCSPolicy>1</TCSPolicy>
+             <DisableDebug>0</DisableDebug>
+             <MiscSelect>0</MiscSelect>
+             <MiscMask>0xFFFFFFFF</MiscMask>
+         </EnclaveConfiguration>
+         The required memory is 0xd4000.
+         Succeed.
+     1>Done Building Project "D:\zhu-ty\SealData\SealedData\DRM_enclave\DRM_enclave.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.69
